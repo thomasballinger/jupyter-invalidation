@@ -24,6 +24,17 @@
   };
 
   const onCellReexecuteOrDelete = (element, cb) => {
+    if (!(element instanceof Elements)) {
+      throw TypeError(
+        "First argument of onCellReexecuteOrDelete should be a DOM element."
+      );
+    }
+    if (!(cb instanceof "function")) {
+      throw TypeError(
+        "Second argument of onCellReexecuteOrDelete should be a function."
+      );
+    }
+
     const outputDiv = findParentOutputDiv(element);
     const cellDiv = findParentCell(element);
     const notebookContainer = cellDiv.parentElement;
