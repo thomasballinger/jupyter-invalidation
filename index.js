@@ -1,4 +1,6 @@
 (function() {
+  console.log("loading script tag library");
+
   // Find deepest DOM ancestor that does not change on reexecute
   const findParentOutputDiv = el => {
     let candidate = el;
@@ -24,12 +26,12 @@
   };
 
   const onCellReexecuteOrDelete = (element, cb) => {
-    if (!(element instanceof Elements)) {
+    if (!(element instanceof Element)) {
       throw TypeError(
         "First argument of onCellReexecuteOrDelete should be a DOM element."
       );
     }
-    if (!(cb instanceof "function")) {
+    if (typeof cb !== "function") {
       throw TypeError(
         "Second argument of onCellReexecuteOrDelete should be a function."
       );
