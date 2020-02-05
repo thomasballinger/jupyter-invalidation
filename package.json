@@ -1,6 +1,6 @@
 {
   "name": "jupyter-invalidation",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Invalidation for Juptyer notebook cells: a hook to run code when cell output is overwritten or deleted by a notebook event like reexecution or cell deletion.",
   "main": "index.js",
   "scripts": {

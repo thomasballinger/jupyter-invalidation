@@ -77,7 +77,7 @@
     notebookMutationObserver.observe(notebookContainer, { childList: true });
   };
 
-  if (typeof window.onCellReexecuteOrDelete === "undefined") {
+  if (typeof window["onCellReexecuteOrDelete"] === "undefined") {
     window.onCellReexecuteOrDelete = onCellReexecuteOrDelete;
   }
 })();
